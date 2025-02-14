@@ -60,7 +60,7 @@ To show `Table of Contents`, update your config by adding
 
 And then on each page add the attribute `showTableOfContents: true` **(Note: It is disabled by default)**
 
-```markdown
+```yaml
 ---
 title: "Hello, world!"
 image: "/path/to/image.png"
@@ -292,7 +292,7 @@ We make sure your pages are social media ready.
 
 ![Social Media Preview](/images/theme-documentation-advanced/preview.png "Social Media Preview")
 
-```markdown
+```yaml
 ---
 title: "Hello, world!"
 image: "/path/to/image.png"
@@ -305,7 +305,7 @@ image: "/path/to/image.png"
 
 The keywords relevant for SEO are composed of the page `tags` as defined below:
 
-```markdown
+```yaml
 ---
 title: "Hello, world!"
 tags: ["hello", "world"]
@@ -314,7 +314,7 @@ tags: ["hello", "world"]
 
 and the `metaKeywords` specified in the config.toml:
 
-```markdown
+```toml
 [params]
   metaKeywords = ["blog", "gokarna", "hugo"]
 ```
