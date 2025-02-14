@@ -353,7 +353,9 @@ Define the [copyright notice for your site](https://gohugo.io/methods/site/copyr
 For example, the following configuration in `config.toml` and front matter respectively...
 
 ```toml
-copyright = "Verbatim copying and distribution of this entire article are permitted worldwide, without royalty, in any medium, provided this notice is preserved."
+copyright = "Verbatim copying and distribution of this entire article are
+permitted worldwide, without royalty, in any medium, provided this notice is
+preserved."
 ```
 
 ```
