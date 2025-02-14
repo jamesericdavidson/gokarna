@@ -358,7 +358,7 @@ permitted worldwide, without royalty, in any medium, provided this notice is
 preserved."
 ```
 
-```
+```yaml
 date: 2020-06-17
 lastmod: 2024-02-05
 ```
