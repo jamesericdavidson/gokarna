@@ -373,7 +373,9 @@ The years of `.Date` and `.Lastmod` are used to create a date range for your cop
 
 ## Minification
 
-`hugo`'s HTML output can be [minified](https://gohugo.io/hugo-pipes/minification/#usage), resulting in smaller files. This makes your site more performant (especially when paired with compression), and may confer a better [Google Lighthouse](https://pagespeed.web.dev/) score.
+`hugo`'s HTML output can be [minified](https://gohugo.io/hugo-pipes/minification/#usage), resulting in smaller files.
+
+This makes your site more performant (especially when paired with [compression](https://www.giftofspeed.com/gzip-test/)), and may confer a higher [Google Lighthouse](https://pagespeed.web.dev/) score.
 
 ```toml
 [minify]
