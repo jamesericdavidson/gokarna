@@ -106,6 +106,38 @@ Note that the years of `.Date` and `.Lastmod` are used to create a date range fo
 
 Inject arbitrary HTML into `<head>` and `<footer>`, using `customHeadHTML` and `customFooterHTML` respectively.
 
+### Analytics
+
+Integration with any analytics tool: This was a personal pet peeve. User privacy is our primary concern and this meant not using Google Analytics or any of the popular tools.
+
+We preferred privacy friendly tools like [Umami](https://umami.is/) & [Fathom Analytics](https://usefathom.com/), but the downside was that no theme supported them out of the box which led to either changing the theme source code or contributing supporting code to the original theme (both of which are good ways to extend the theme, but not our ideal choice)
+
+Giving users the freedom to add anything in the HTML via config.toml seemed like an elegant way to solve the problem.
+
+```toml
+[params]
+  customHeadHTML = '''
+    <script async defer data-website-id="website-id" src="https://analytics.example.com/script.js"></script>
+  '''
+```
+
+### Bring your own scripts
+
+Add your own JavaScript or CSS by putting them in the `static/` folder and importing them into your HTML.
+
+```toml
+[params]
+  customHeadHTML = '''
+    <script>console.log("Custom script or import");</script>
+    <script src="/js/custom.js"></script>
+  '''
+  customFooterHTML = '''
+    <div>Comment SDK Integration</div>
+    <script>console.log("Custom script or import");</script>
+    <script src="/js/custom.js"></script>
+  '''
+```
+
 ### Comments section
 
 Add a comments section to the end of posts by providing a `customCommentHTML` script from your platform of choice.
@@ -128,38 +160,6 @@ customCommentHTML = """
 ```
 
 You can style the resulting `<div id="comments">` with CSS.
-
-### Bring your own scripts
-
-Add your own JavaScript or CSS by putting them in the `static/` folder and importing them into your HTML.
-
-```toml
-[params]
-  customHeadHTML = '''
-    <script>console.log("Custom script or import");</script>
-    <script src="/js/custom.js"></script>
-  '''
-  customFooterHTML = '''
-    <div>Comment SDK Integration</div>
-    <script>console.log("Custom script or import");</script>
-    <script src="/js/custom.js"></script>
-  '''
-```
-
-### Analytics
-
-Integration with any analytics tool: This was a personal pet peeve. User privacy is our primary concern and this meant not using Google Analytics or any of the popular tools.
-
-We preferred privacy friendly tools like [Umami](https://umami.is/) & [Fathom Analytics](https://usefathom.com/), but the downside was that no theme supported them out of the box which led to either changing the theme source code or contributing supporting code to the original theme (both of which are good ways to extend the theme, but not our ideal choice)
-
-Giving users the freedom to add anything in the HTML via config.toml seemed like an elegant way to solve the problem.
-
-```toml
-[params]
-  customHeadHTML = '''
-    <script async defer data-website-id="website-id" src="https://analytics.example.com/script.js"></script>
-  '''
-```
 
 ### Katex
 
@@ -195,23 +195,6 @@ Then the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` wrapped by doub
    $$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$
 
 The equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` wrapped by single `$` would be displayed inline as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$.
-
-### Comments
-
-Integration with any comments SDK is possible. All you have to do is add the relevant HTML/JavaScript in the `customFooterHTML` param.
-
-An example with commento:
-
-```toml
-[params]
-  customFooterHTML = '''
-    <div id="commento"></div>
-    <script defer src="{{ .Site.Params.CommentoURL }}/js/commento.js"></script>
-    <noscript>Please enable JavaScript to load the comments.</noscript>
-  '''
-```
-
-
 
 ## Weights
 
