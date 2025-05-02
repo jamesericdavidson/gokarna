@@ -147,7 +147,7 @@ For example:
 <!-- toml syntax highlighting gives forward slashes an ugly red foreground and
     black background -->
 
-```toml
+```
 customCommentHTML = """
     <script src="https://utteranc.es/client.js"
         repo="526avijitgupta/gokarna"
