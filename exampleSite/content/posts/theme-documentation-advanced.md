@@ -366,15 +366,6 @@ A post's date and description can be hidden if it has at least one tag listed in
       weight = 2
 ```
 
-## Minify HTML
-
-`hugo`'s HTML output can be [minified](https://gohugo.io/hugo-pipes/minification/#usage), resulting in smaller files. This makes your site more performant (especially when paired with compression), and may confer a better [Google Lighthouse](https://pagespeed.web.dev/) score.
-
-```toml
-[minify]
-    minifyOutput = true
-```
-
 ## Install as a Hugo module
 
 1. Install `go` and `hugo`
@@ -413,3 +404,16 @@ A post's date and description can be hidden if it has at least one tag listed in
     Useful for building your site with a CI/CD pipeline, such as [GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) - the [actions-hugo](https://github.com/peaceiris/actions-hugo) workflow is a good starting point.
 
 See the documentation provided by [Hugo](https://gohugo.io/hugo-modules/use-modules/) and [Nick Gracilla](https://www.nickgracilla.com/posts/master-hugo-modules-managing-themes-as-modules/#how-to-use-hugo-themes-as-modules) for more information.
+
+## Google Lighthouse
+
+### Minify HTML
+
+`hugo`'s HTML output can be [minified](https://gohugo.io/configuration/minify/), resulting in smaller files. This makes your site more performant (especially when paired with compression), and may confer a better [Google Lighthouse](https://pagespeed.web.dev/) score.
+
+```toml
+[minify]
+    minifyOutput = true
+```
+
+You can also specify the `hugo` option `--minify` at runtime.
