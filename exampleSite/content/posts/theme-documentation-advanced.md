@@ -194,14 +194,6 @@ For example, the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` (wrappe
 
 Moreover, the equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` (wrapped by single `$`) is displayed in-line as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$
 
-## Weights
-
-The `weight` attribute can be added in the markdown metadata for `post` types. We have an option in our config.toml: `params.showPostsOnHomePage` which allows you to:
-
-1. Show popular posts on home page if the value is set to `popular`. It sorts the all the posts by it's weight attribute in ascending order.
-2. Show recent posts on home page if the value is set to `recent`
-3. Do not show anything if the variable is unset or an empty string.
-
 ## Homepage
 
 ### About description text
