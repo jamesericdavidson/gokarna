@@ -200,6 +200,59 @@ Gokarna bundles popular social media icons (e.g. GitHub, LinkedIn, X, StackOverf
 
 The full list is available on [on GitHub](https://github.com/gokarna-theme/gokarna-hugo/tree/main/static/svg/icons).
 
+### Header
+
+[Feather Icons](https://feathericons.com) boast a comprehensive array of general use icons. Unlike [the home page](#home-page), you do not need to download additional Feather Icons.
+
+To use Feather Icons in your [navigation bar menu](https://gohugo.io/configuration/menus/), you must provide:
+
+- An `identifier` or `name`
+
+    Display text to the right of the icon by using `name`. Otherwise, use `identifier`.
+
+    Note that an `identifier` must be unique.
+
+- The target `url`
+- The item's `weight`
+
+    Lower weights are listed first, appearing leftmost.
+
+- A `pre` string, containing the relevant icon
+
+```toml
+  [[menu.main]]
+    identifier = "github"
+    url = "https://github.com"
+    weight = 3
+    # Using feather-icons
+    pre = "<span data-feather='github'></span>"
+```
+
+The `data-feather='github'` element must match the icon's name seen on [Feather Icons'](https://feathericons.com) website - examples include `data-feather='file'`, and `data-feather='list'`.
+
+You can additionally specify that a link should be opened in a new tab:
+
+```toml
+[[menu.main]]
+  identifier = "github"
+  url = "https://github.com"
+  weight = 3
+  pre = "<span data-feather='github'></span>"
+  [menu.main.params]
+    newPage = true
+```
+
+To inject a non-Feather icon, use the `svg-inject` class, and provide a local SVG:
+
+```toml
+  [[menu.main]]
+    identifier = "github"
+    url = "https://github.com/"
+    weight = 3
+    # Without using feather-icons
+    pre = "<img class='svg-inject' src='/svg/icons/github.svg' />"
+```
+
 ### Home page
 
 To display icons on the home page, update the `socialIcons` param with the `name` of the icon, and a `url` to your profile on that platform.
@@ -215,42 +268,6 @@ To use icons that Gokarna doesn't bundle: download the SVG from [Simple Icons](h
     ]
 ```
 
-### Icons in header
-
-[Feather](https://feathericons.com) icons has a comprehensive list of icons which are more general purpose and not limited to social media.
-Therefore, we use feather as an additional source of icons. Here is an example of how to add custom icons in the header using feather:
-
-```toml
-  [[menu.main]]
-    identifier = "github"
-    url = "https://github.com"
-    weight = 3
-    # Using feather-icons
-    pre = "<span data-feather='github'></span>"
-```
-
-The same icon in this case could also be added without feather:
-
-```toml
-  [[menu.main]]
-    identifier = "github"
-    url = "https://www.buymeacoffee.com/"
-    weight = 3
-    # Without using feather-icons
-    pre = "<img class='svg-inject' src='/icons/github.svg' />"
-```
-
-You can add `params` allowing menu link to open in a new tab, for example: 
-```toml
-[[menu.main]]
-  identifier = "github"
-  url = "https://github.com/zerodahero"
-  weight = 4
-  # We use feather-icons: https://feathericons.com/
-  pre = "<span data-feather='github'></span>"
-  [menu.main.params]
-    newPage = true
-```
 ## Syntax Highlighting
 
 Hugo lets you choose the color scheme for the codeblocks. You can choose from the options here: https://xyproto.github.io/splash/docs/all.html
