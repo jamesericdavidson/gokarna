@@ -194,32 +194,7 @@ For example, the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` (wrappe
 
 Moreover, the equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` (wrapped by single `$`) is displayed in-line as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$
 
-## Homepage
-
-### About description text
-
-In extension to the basic configuration with the `description` field, it's also possible to write the about section using markdown.
-
-Create a file called `_index.md` in the `content` directory and write your content there.
-
-> **Attention**: Don't use frontmatter in this file. It would also render it.
-
-```md
-# Gokarna
-Gokarna is a small temple town located in the Uttara Kannada district of Karnataka state in southern India.
-
-## Beaches
-Something about beaches, **which is *very* important**.
-
-- every
-- beach
-- is beautiful
-```
-
-Having the above about section in place, results in the following homepage:
-
-![Markdown about description](/images/theme-documentation-advanced/homepage-markdown-about-description.png "Markdown about description")
-
+## Home page
 
 ## Icons
 
