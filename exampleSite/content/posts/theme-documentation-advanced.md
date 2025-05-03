@@ -159,9 +159,9 @@ customCommentHTML = """
 
 You can style the resulting `<div id="comments">` with CSS.
 
-### Katex
+### KaTeX
 
-Katex is a math typesetting library for the web which lets you write beautiful equations. To use it, add the javascript as mentioned in [their documentation](https://katex.org/docs/browser.html) in our `params.customHeadHTML`.
+KaTeX is a math typesetting library that lets you write beautiful equations. To use it, add the JavaScript mentioned in [their documentation](https://katex.org/docs/browser.html) to `customHeadHTML`.
 
 ```toml
 [params]
@@ -186,13 +186,13 @@ Katex is a math typesetting library for the web which lets you write beautiful e
   '''
 ```
 
-> Note: Make sure you use the latest version of katex and use the correct script tags as described in [their documentation](https://katex.org/docs/browser.html)
+Ensure that the latest version of KaTeX is used, per [the documentation](https://katex.org/docs/browser.html).
 
-Then the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` wrapped by double `$$` would be displayed as:
+For example, the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` (wrapped by double `$$`) is displayed as:
 
    $$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$
 
-The equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` wrapped by single `$` would be displayed inline as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$.
+Moreover, the equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` (wrapped by single `$`) is displayed in-line as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$
 
 ## Weights
 
