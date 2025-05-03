@@ -374,3 +374,42 @@ A post's date and description can be hidden if it has at least one tag listed in
 [minify]
     minifyOutput = true
 ```
+
+## Install as a Hugo module
+
+1. Install `go` and `hugo`
+
+    Package managers such as [Homebrew](https://brew.sh/) (Mac, Linux) and [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget) (Windows) can be used.
+
+2. Initialise your website as a module - [using your Git repository as its name](https://www.nickgracilla.com/posts/master-hugo-modules-managing-themes-as-modules/#initialize-your-hugo-project)
+
+    ```sh
+    hugo mod init github.com/<your_user>/<your_project>
+    ```
+
+3. Add Gokarna to `config.toml`
+
+    ```toml
+    [module]
+      [[module.imports]]
+        path = "github.com/gokarna-theme/gokarna-hugo"
+    ```
+
+    [The `theme` key can now be removed](https://www.nickgracilla.com/posts/master-hugo-modules-managing-themes-as-modules/#get-the-projects-module-dependencies) from `config.toml`.
+
+4. Download Gokarna
+
+    ```sh
+    hugo mod get -u github.com/gokarna-theme/gokarna-hugo
+    ```
+
+5. (Optional) Add `go.mod` and `go.sum` to your repository
+
+    ```sh
+    git add go.mod go.sum
+    git commit -m 'chore(modules): add gokarna'
+    ```
+
+    Useful for building your site with a CI/CD pipeline, such as [GitHub Actions](https://docs.github.com/en/actions/about-github-actions/understanding-github-actions) - the [actions-hugo](https://github.com/peaceiris/actions-hugo) workflow is a good starting point.
+
+See the documentation provided by [Hugo](https://gohugo.io/hugo-modules/use-modules/) and [Nick Gracilla](https://www.nickgracilla.com/posts/master-hugo-modules-managing-themes-as-modules/#how-to-use-hugo-themes-as-modules) for more information.
