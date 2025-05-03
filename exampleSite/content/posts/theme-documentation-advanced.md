@@ -108,16 +108,14 @@ Inject arbitrary HTML into `<head>` and `<footer>`, using `customHeadHTML` and `
 
 ### Analytics
 
-Integration with any analytics tool: This was a personal pet peeve. User privacy is our primary concern and this meant not using Google Analytics or any of the popular tools.
-
-We preferred privacy friendly tools like [Umami](https://umami.is/) & [Fathom Analytics](https://usefathom.com/), but the downside was that no theme supported them out of the box which led to either changing the theme source code or contributing supporting code to the original theme (both of which are good ways to extend the theme, but not our ideal choice)
-
-Giving users the freedom to add anything in the HTML via config.toml seemed like an elegant way to solve the problem.
+Add your preferred analytics tool (such as [Umami](https://umami.is/), or [Fathom Analytics](https://usefathom.com/)) via `config.toml`.
 
 ```toml
 [params]
   customHeadHTML = '''
-    <script async defer data-website-id="website-id" src="https://analytics.example.com/script.js"></script>
+    <script async defer data-website-id="website-id"
+        src="https://analytics.example.com/script.js">
+    </script>
   '''
 ```
 
