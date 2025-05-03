@@ -247,7 +247,7 @@ To inject a non-Feather icon, use the `svg-inject` class, and provide a local SV
 ```toml
   [[menu.main]]
     identifier = "github"
-    url = "https://github.com/"
+    url = "https://github.com"
     weight = 3
     # Without using feather-icons
     pre = "<img class='svg-inject' src='/svg/icons/github.svg' />"
