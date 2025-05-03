@@ -198,10 +198,11 @@ Moreover, the equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` (wrapped by 
 
 Gokarna supports popular social media icons (e.g. GitHub, LinkedIn, X, StackOverflow, Dribbble) out of the box. The full list of bundled icons can be seen [on GitHub](https://github.com/gokarna-theme/gokarna-hugo/tree/main/static/svg/icons).
 
-### Icons on homepage
+### Home page
 
-To display icons on the homepage, simply update the `socialIcons` config param with a list of name and url of each icon. The specified `name` should exactly match one of the names from [the `icons` directory](https://github.com/gokarna-theme/gokarna-hugo/tree/main/static/svg/icons).
-If you want to add more icons, you can download the svg directly from [Simple Icons' website](https://simpleicons.org/)  and place them in your local icons directory (`/static/svg/icons/`)
+To display icons on the home page, update the `socialIcons` param with the `name` of the icon, and a `url` to your profile on that platform.
+
+To use icons that Gokarna doesn't bundle: download the SVG from [Simple Icons](https://simpleicons.org/), and move it to `static/svg/icons/`.
 
 ```toml
   [params]
@@ -211,11 +212,6 @@ If you want to add more icons, you can download the svg directly from [Simple Ic
       {name = "stackoverflow", url = "https://example.com"},
     ]
 ```
-
-Preview:
-
-![Icons on homepage Preview](/images/theme-documentation-advanced/icons-homepage-preview.png "Icons on homepage Preview")
-
 
 ### Icons in header
 
