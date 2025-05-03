@@ -194,8 +194,6 @@ For example, the equation `$$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$` (wrappe
 
 Moreover, the equation `$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$` (wrapped by single `$`) is displayed in-line as $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$
 
-## Home page
-
 ## Icons
 
 Gokarna supports popular social media icons (e.g. GitHub, LinkedIn, X, StackOverflow, Dribbble) out of the box. The full list of bundled icons can be seen [on GitHub](https://github.com/gokarna-theme/gokarna-hugo/tree/main/static/svg/icons).
