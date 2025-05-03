@@ -44,7 +44,7 @@ image: "/path/to/image.png"
 type: "page"
 ---
 
-# Projects
+## Projects
 
 Keep an eye on this space for my upcoming projects!
 ```
@@ -61,7 +61,7 @@ To enable an optional [Table of Contents](https://gohugo.io/configuration/markup
     ordered = false
 ```
 
-Note that `.Title` is also used as `<h1>`. You should ['avoid using multiple `<h1>` elements on one page'](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#avoid_using_multiple_h1_elements_on_one_page), therefore a `startLevel` of `2` (or more) is recommended.
+Note that `.Title` is also used as `<h1>`. You should ['avoid using multiple `<h1>` elements on one page'](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#avoid_using_multiple_h1_elements_on_one_page), therefore a `startLevel` of `2` is recommended.
 
 Set `showTableOfContents` to `true` in front matter where you want the Table of Contents to appear:
 
