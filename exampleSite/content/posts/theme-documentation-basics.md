@@ -300,7 +300,7 @@ Note that '[defining font sizes in px is not accessible](https://developer.mozil
 
 ```toml
 [params]
-  fontSize = "1.094rem" # equal to 17.5px
+  fontSize = "1.1rem" # equal to 17.6px
 ```
 
 ### Footer
